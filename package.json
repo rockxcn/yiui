@@ -1,9 +1,7 @@
 {
-    "name": "yiuni",
-    "id": "chensuiyi-yiuni",
-    "displayName": "yiuni",
+    "name": "yiui",
     "version": "0.0.1",
-    "description": "uniapp cli 项目开发基础框架",
+    "description": "支持使用uniapp开发PC/H5/APP的统一项目模板和UI框架",
     "keywords": [
         "yiuni",
         "项目",
@@ -11,18 +9,6 @@
         "组件",
         "框架"
     ],
-    "dcloudext": {
-        "category": [
-            "前端组件",
-            "通用组件"
-        ],
-        "contact": "24323626",
-        "declaration": {
-            "ads": "无",
-            "data": "插件不采集任何数据",
-            "permissions": "无"
-        }
-    },
     "scripts": {
         "serve": "npm run dev:h5",
         "build": "npm run build:h5",
