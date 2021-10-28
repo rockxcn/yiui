@@ -1,0 +1,74 @@
+page {
+  height: 100vh;
+}
+
+.page-full {
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-contain,
+.bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.title-line {
+  padding: 20px 10px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+.title-line .text {
+  color: #ffffff;
+}
+.title-line .right {
+  display: flex;
+  align-items: center;
+  color: #aaaaaa;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-wrap {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.ellipsis {
+  word-break: keep-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+}
+
+.padd20 {
+  padding: 20rpx;
+}
+
+.common-empty-data {
+  padding-top: 200rpx;
+}
+
+.line-through {
+  text-decoration: line-through;
+}/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,60 @@
+// 断点
+$yiui-brackpoint-pc: 1600px; // 电脑最低宽度
+$yiui-brackpoint-pd: 1200px; // 平板最低宽度
+$yiui-brackpoint-mb: 800px; // 手机最小宽度
+$yiui-brackpoint-sm: 400px; // 超小屏幕最大宽度
+
+// 层次索引
+$yiui-z-fab: 990 !default;
+$yiui-z-side: 1000 !default;
+$yiui-z-marginals: 2000 !default;
+$yiui-z-fixed-drawer: 3000 !default;
+$yiui-z-fullscreen: 6000 !default;
+$yiui-z-menu: 6000 !default;
+$yiui-z-top: 7000 !default;
+$yiui-z-tooltip: 9000 !default;
+$yiui-z-notify: 9500 !default;
+$yiui-z-max: 9998 !default;
+
+// 颜色
+$yiui-color-primary: #007aff;
+$yiui-color-success: #4cd964;
+$yiui-color-warning: #f0ad4e;
+$yiui-color-error: #dd524d;
+$yiui-color-info: #909399;
+$yiui-color-white: #ffffff;
+$yiui-color-black: #000000;
+
+// 尺寸
+$yiui-size-base: 32rpx !default;
+$yiui-size-xs: $yiui-size-base * 0.25;
+$yiui-size-sm: $yiui-size-base * 0.5;
+$yiui-size-md: $yiui-size-base * 1;
+$yiui-size-lg: $yiui-size-base * 1.5;
+$yiui-size-xl: $yiui-size-base * 2;
+
+// 颜色列表
+$colorList: primary, success, warning, error, info, white, black;
+// 颜色映射
+$colorMap: (
+    //
+        primary: $yiui-color-primary,
+    success: $yiui-color-success,
+    warning: $yiui-color-warning,
+    error: $yiui-color-error,
+    info: $yiui-color-info,
+    white: $yiui-color-white,
+    black: $yiui-color-black
+);
+
+// 尺寸列表
+$sizeList: xs, sm, md, lg, xl;
+// 尺寸映射
+$sizeMap: (
+    //
+        xs: $yiui-size-xs,
+    sm: $yiui-size-sm,
+    md: $yiui-size-md,
+    lg: $yiui-size-lg,
+    xl: $yiui-size-xl
+);

@@ -1,0 +1,124 @@
+@use 'sass:math';
+@use 'sass:map';
+* {
+    box-sizing: border-box;
+}
+// 布局系统
+.yiui-row {
+    .yiui-col {
+        // 栅格数组
+        $grid: (
+            //
+                1: (1),
+            2: (1),
+            3: (1, 2),
+            4: (1, 3),
+            5: (1, 2, 3, 4),
+            6: (1, 5),
+            7: (1, 2, 3, 4, 5, 6),
+            8: (1, 3, 5, 7),
+            9: (1, 2, 4, 5, 7, 8),
+            10: (1, 3, 7, 9),
+            11: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+            12: (1, 5, 7, 11)
+        );
+        box-sizing: border-box;
+        // 超小设备
+        @media screen and (max-width: $yiui-brackpoint-sm) {
+            @each $item in $grid {
+                $key: nth($item, 1);
+                $list: nth($item, 2);
+                @each $val in $list {
+                    $width: math.div(100%, $key) * $val;
+                    &.sm-#{$val}-#{$key} {
+                        flex: 0 0 $width;
+                        min-width: $width;
+                        max-width: $width;
+                    }
+                }
+            }
+        }
+        // 手机设备
+        @media screen and (min-width: $yiui-brackpoint-sm) and (max-width: $yiui-brackpoint-mb) {
+            @each $item in $grid {
+                $key: nth($item, 1);
+                $list: nth($item, 2);
+                @each $val in $list {
+                    $width: math.div(100%, $key) * $val;
+                    &.mb-#{$val}-#{$key} {
+                        flex: 0 0 $width;
+                        min-width: $width;
+                        max-width: $width;
+                    }
+                }
+            }
+        }
+        // 平板设备
+        @media screen and (min-width: $yiui-brackpoint-mb) and (max-width: $yiui-brackpoint-pd) {
+            @each $item in $grid {
+                $key: nth($item, 1);
+                $list: nth($item, 2);
+                @each $val in $list {
+                    $width: math.div(100%, $key) * $val;
+                    &.pd-#{$val}-#{$key} {
+                        flex: 0 0 $width;
+                        min-width: $width;
+                        max-width: $width;
+                    }
+                }
+            }
+        }
+        // 电脑设备
+        @media screen and (min-width: $yiui-brackpoint-pd) and (max-width: $yiui-brackpoint-pc) {
+            @each $item in $grid {
+                $key: nth($item, 1);
+                $list: nth($item, 2);
+                @each $val in $list {
+                    $width: math.div(100%, $key) * $val;
+                    &.pc-#{$val}-#{$key} {
+                        flex: 0 0 $width;
+                        min-width: $width;
+                        max-width: $width;
+                    }
+                }
+            }
+        }
+
+        // 大屏设备
+        @media screen and (min-width: $yiui-brackpoint-pc) {
+            @each $item in $grid {
+                $key: nth($item, 1);
+                $list: nth($item, 2);
+                @each $val in $list {
+                    $width: math.div(100%, $key) * $val;
+                    &.lg-#{$val}-#{$key} {
+                        flex: 0 0 $width;
+                        min-width: $width;
+                        max-width: $width;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@each $name in $colorList {
+    .yiui-bg-color-#{$name} {
+        background-color: map.get($colorMap, $name);
+    }
+    .yiui-fr-color-#{$name} {
+        color: map.get($colorMap, $name);
+    }
+    .yiui-bd-color-#{$name} {
+        border-color: map.get($colorMap, $name);
+    }
+}
+
+@each $name in $sizeList {
+    .yiui-mg-size-#{$name} {
+        margin: map.get($sizeMap, $name);
+    }
+    .yiui-pd-size-#{$name} {
+        padding: map.get($sizeMap, $name);
+    }
+}

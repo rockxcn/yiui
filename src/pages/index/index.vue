@@ -1,45 +1,54 @@
 <template>
-    <view class="content">
-        <image class="logo" src="/static/logo.png"></image>
-        <view>
-            <text class="title">{{ title }}</text>
-        </view>
+    <view class="page-full page-index">
+        <yiui-row :space="10">
+            <yiui-col sm="1-3"><div class="box">1-3</div></yiui-col>
+            <yiui-col sm="1-3"><div class="box">1-3</div></yiui-col>
+            <yiui-col sm="1-3"><div class="box">1-3</div></yiui-col>
+            <yiui-col sm="2-3"><div class="box">2-3</div></yiui-col>
+            <yiui-col sm="1-3"><div class="box">1-3</div></yiui-col>
+            <yiui-col sm="2-5"><div class="box">2-5</div></yiui-col>
+            <yiui-col sm="3-5"><div class="box">3-5</div></yiui-col>
+            <yiui-col sm="1-1"><div class="box">1-1</div></yiui-col>
+            <yiui-col sm="2-7"><div class="box">2-7</div></yiui-col>
+            <yiui-col sm="4-7"><div class="box">4-7</div></yiui-col>
+            <yiui-col sm="1-7"><div class="box">1-7</div></yiui-col>
+            <yiui-col sm="6-11"><div class="box">6-11</div></yiui-col>
+            <yiui-col sm="2-11"><div class="box">2-11</div></yiui-col>
+            <yiui-col sm="3-11"><div class="box">3-11</div></yiui-col>
+            <yiui-col sm="1-4"><div class="box">1-4</div></yiui-col>
+            <yiui-col sm="1-4"><div class="box">1-4</div></yiui-col>
+            <yiui-col sm="1-4"><div class="box">1-4</div></yiui-col>
+            <yiui-col sm="1-4"><div class="box">1-4</div></yiui-col>
+            <yiui-col sm="1-5"><div class="box">1-5</div></yiui-col>
+            <yiui-col sm="1-5"><div class="box">1-5</div></yiui-col>
+            <yiui-col sm="1-5"><div class="box">1-5</div></yiui-col>
+            <yiui-col sm="1-5"><div class="box">1-5</div></yiui-col>
+            <yiui-col sm="1-5"><div class="box">1-5</div></yiui-col>
+        </yiui-row>
+        <yiui-button bgColor="primary" frColor="white">123</yiui-button>
     </view>
 </template>
 
 <script>
 export default {
     data() {
-        return {
-            title: "Hello",
-        };
+        return {};
     },
     onLoad() {},
     methods: {},
 };
 </script>
 
-<style>
-.content {
+<style lang="scss" scoped>
+.box {
+    border: 1px solid #ddd;
+    margin-top: 20rpx;
+    padding: 0 10rpx;
+    height: 60rpx;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    height: 200rpx;
-    width: 200rpx;
-    margin: 200rpx auto 50rpx auto;
-}
-
-.text-area {
-    display: flex;
-    justify-content: center;
-}
-
-.title {
-    font-size: 36rpx;
-    color: #8f8f94;
+    font-size: 28rpx;
+    color: #999;
+    border-radius: 12rpx;
 }
 </style>
